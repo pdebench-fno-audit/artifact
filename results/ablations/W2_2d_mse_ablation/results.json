@@ -1,0 +1,44 @@
+{
+  "test_id": 26,
+  "pde": "2D Diff-React",
+  "parameter": "default",
+  "nrmse_pertimestep": 0.0037334919907152653,
+  "nrmse_frobenius": 0.0037334919907152653,
+  "published_fno": 0.12,
+  "published_source": "PDEBench Table 5, 2D diffusion-reaction, nRMSE, FNO",
+  "beat_pertimestep": true,
+  "beat_frobenius": true,
+  "best_val_nrmse": 0.0036428356543183327,
+  "n_params": 1291302,
+  "training_time_s": 21851.759275197983,
+  "split": {
+    "train": 800,
+    "val": 100,
+    "test": 100
+  },
+  "data_leak_checks": {
+    "no_nan_inf": true
+  },
+  "per_sample_stats": {
+    "best_idx": 9,
+    "best_err": 0.002748099621385336,
+    "median_idx": 36,
+    "median_err": 0.003629049053415656,
+    "worst_idx": 87,
+    "worst_err": 0.006166510283946991
+  },
+  "architecture": {
+    "type": "fno2d_ar",
+    "modes": 12,
+    "width": 32,
+    "n_layers": 4,
+    "init_step": 5,
+    "lr": 0.001,
+    "epochs": 500,
+    "batch_size": 8,
+    "loss": "standard_mse (W2 ablation)",
+    "noise_std": 0.001,
+    "res_t": 5,
+    "prediction_type": "autoregressive"
+  }
+}

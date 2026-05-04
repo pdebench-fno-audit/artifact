@@ -1,0 +1,60 @@
+{
+  "final_nrmse": 0.01315353810787201,
+  "published_fno": 0.047,
+  "published_source": "PDEBench arXiv:2210.07182 Table, FNO, 1D CFD inviscid Shock Outgoing",
+  "beat": true,
+  "per_channel_nrmse": {
+    "rho": 0.014387089759111404,
+    "v": 0.01882741041481495,
+    "p": 0.006246127188205719
+  },
+  "n_params": 666631,
+  "training_time_s": 13831.606864452362,
+  "best_idx": 290,
+  "median_idx": 723,
+  "worst_idx": 777,
+  "best_err": 0.0008002964896149933,
+  "median_err": 0.005616844166070223,
+  "worst_err": 0.1419888734817505,
+  "architecture": {
+    "modes": 32,
+    "width": 64,
+    "n_layers": 4,
+    "nc": 3,
+    "spatial_res": 256,
+    "pad_size": 32,
+    "pad_mode": "reflect",
+    "h1_weight": 0.05,
+    "noise_std": 0.001,
+    "boundary_weight": 2.0,
+    "boundary_frac": 0.1,
+    "init_step": 10
+  },
+  "literature_innovations": [
+    "Reflection padding (32 points) for non-periodic outgoing BCs (FC-PINO inspired)",
+    "Local conv branch (LOGLO-FNO) for shock-scale features",
+    "Boundary-aware loss: 2x weight near domain edges",
+    "Per-channel normalization for multi-variable system",
+    "H1 Sobolev loss + noise injection"
+  ],
+  "nrmse_pertimestep": 0.013153538130046357,
+  "nrmse_frobenius": 0.006611499935388565,
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.013153538004576974,
+    "ci_lower": 0.012342664962179282,
+    "ci_upper": 0.014144968086917514,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.006611499935388565,
+    "ci_lower": 0.006253649666138517,
+    "ci_upper": 0.007038927333707397,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

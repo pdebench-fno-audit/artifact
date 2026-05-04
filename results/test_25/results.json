@@ -1,0 +1,46 @@
+{
+  "experiment": "E1",
+  "test_id": 25,
+  "pde": "2D Darcy Flow",
+  "parameter": "β=100.0",
+  "fix": "Target normalization + family config (width=32, batch=16, no local conv)",
+  "physicist_prediction": "4e-3 to 8e-3",
+  "nrmse": 0.009499595500528812,
+  "published_fno": 0.0064,
+  "beat": false,
+  "previous_nrmse": 0.0118,
+  "target_normalization": {
+    "mean": 15.225398063659668,
+    "std": 11.840862274169922
+  },
+  "n_params": 1188353,
+  "training_time_s": 8836.57670879364,
+  "architecture": {
+    "type": "fno2d_e1",
+    "modes": 12,
+    "width": 32,
+    "n_layers": 4,
+    "note": "E1: pure spectral (no local conv), target normalization, width=32",
+    "init_step": 0
+  },
+  "nrmse_pertimestep": 0.009499595500528812,
+  "nrmse_frobenius": 0.009499595500528812,
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.009499595500528812,
+    "ci_lower": 0.009117280796926934,
+    "ci_upper": 0.009895284155223635,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.009499595500528812,
+    "ci_lower": 0.009117280770739308,
+    "ci_upper": 0.009895284122109297,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

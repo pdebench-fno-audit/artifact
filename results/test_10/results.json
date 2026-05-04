@@ -1,0 +1,66 @@
+{
+  "test_id": 10,
+  "pde": "1D Burgers",
+  "parameter": "ν=0.01",
+  "nrmse_pertimestep": 0.004162837232973787,
+  "nrmse_frobenius": 0.004861782770603895,
+  "metric_note": "Both metrics computed; per-timestep is primary for PDEBench comparison",
+  "published_fno": 0.0078,
+  "published_source": "PDEBench arXiv:2210.07182 Table 7, FNO, Burgers nu=0.01",
+  "beat_pertimestep": true,
+  "beat_frobenius": true,
+  "best_val_nrmse": 0.004365118220448494,
+  "n_params": 1489029,
+  "training_time_s": 24529.64203977585,
+  "split": {
+    "train": 8000,
+    "val": 1000,
+    "test": 1000
+  },
+  "data_leak_checks": {
+    "ic_preserved": true,
+    "predictions_differ": true,
+    "no_nan_inf": true,
+    "near_perfect_fraction": 0.0
+  },
+  "per_sample_stats": {
+    "best_idx": 667,
+    "best_err": 0.0004559002991300076,
+    "median_idx": 869,
+    "median_err": 0.0034815878607332706,
+    "worst_idx": 666,
+    "worst_err": 0.05006666108965874
+  },
+  "architecture": {
+    "type": "enhanced",
+    "modes": 32,
+    "width": 96,
+    "n_layers": 4,
+    "h1_weight": 0.05,
+    "noise_std": 0.001,
+    "lr": 0.001,
+    "epochs": 500,
+    "batch_size": 32,
+    "res_x": 4,
+    "res_t": 5,
+    "init_step": 10
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.004162837220396238,
+    "ci_lower": 0.003923809714383899,
+    "ci_upper": 0.00440587754756592,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.004861782770603895,
+    "ci_lower": 0.004586455307988217,
+    "ci_upper": 0.005141517969820416,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

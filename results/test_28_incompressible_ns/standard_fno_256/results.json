@@ -1,0 +1,12 @@
+{
+  "test_id": "28_std_256",
+  "nrmse": 0.27980300784111023,
+  "published": 0.15,
+  "beat": false,
+  "n_params": 465566,
+  "time_s": 10487.740473270416,
+  "arch": "Standard FNO2d (periodic FFT, no padding, MSE, StepLR)",
+  "resolution": "256x256",
+  "temporal": "first 101 native steps / RES_T=5 \u2192 21 steps",
+  "config": "width=20, modes=12, 4 layers, MSE, StepLR(100,0.5), wd=1e-4"
+}

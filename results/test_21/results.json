@@ -1,0 +1,62 @@
+{
+  "test_id": 21,
+  "pde": "2D Darcy Flow",
+  "parameter": "β=0.01",
+  "nrmse_pertimestep": 0.2670288383960724,
+  "nrmse_frobenius": 0.2670288383960724,
+  "published_fno": 2.5,
+  "published_source": "PDEBench Table 8, DarcyFlow β=0.01, nRMSE, FNO",
+  "beat_pertimestep": true,
+  "beat_frobenius": true,
+  "best_val_nrmse": 0.2596837878227234,
+  "n_params": 1290885,
+  "training_time_s": 14906.470500707626,
+  "split": {
+    "train": 8000,
+    "val": 1000,
+    "test": 1000
+  },
+  "data_leak_checks": {
+    "predictions_differ": true,
+    "no_nan_inf": true,
+    "near_perfect_fraction": 0.0
+  },
+  "per_sample_stats": {
+    "best_idx": 297,
+    "best_err": 0.02846900373697281,
+    "median_idx": 553,
+    "median_err": 0.11888065189123154,
+    "worst_idx": 56,
+    "worst_err": 3.0521650314331055
+  },
+  "architecture": {
+    "type": "fno2d",
+    "modes": 12,
+    "width": 32,
+    "n_layers": 4,
+    "lr": 0.001,
+    "epochs": 500,
+    "batch_size": 16,
+    "loss": "normalized_mse",
+    "prediction_type": "single_shot",
+    "init_step": 0
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.2670288383960724,
+    "ci_lower": 0.24816753859282473,
+    "ci_upper": 0.28619621105920523,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.2670288383960724,
+    "ci_lower": 0.2481675384887494,
+    "ci_upper": 0.286196212326549,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

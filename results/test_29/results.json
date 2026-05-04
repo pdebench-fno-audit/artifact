@@ -1,0 +1,64 @@
+{
+  "test_id": 29,
+  "pde": "2D Comp NS",
+  "parameter": "M=0.1, η=ζ=0.01, Rand, periodic",
+  "nrmse_pertimestep": 0.01862,
+  "nrmse_frobenius": 0.003976949490606785,
+  "published_fno": 0.17,
+  "published_source": "PDEBench Table 11, M=0.1, η=ζ=0.01, Rand periodic, nRMSE, FNO",
+  "beat_pertimestep": true,
+  "best_val_nrmse": 0.0038053994067013264,
+  "n_params": 1291880,
+  "training_time_s": 75205.33062505722,
+  "split": {
+    "train": 8000,
+    "val": 1000,
+    "test": 1000
+  },
+  "physical_bounds": {
+    "neg_density": 0,
+    "neg_pressure": 0,
+    "positivity_guaranteed": true,
+    "method": "log-space prediction"
+  },
+  "per_sample_stats": {
+    "best_idx": 694,
+    "best_err": 0.00042372901225462556,
+    "median_idx": 190,
+    "median_err": 0.00305467308498919,
+    "worst_idx": 624,
+    "worst_err": 0.037710804492235184
+  },
+  "architecture": {
+    "type": "fno2d_ar_logspace",
+    "modes": 12,
+    "width": 32,
+    "n_layers": 4,
+    "nc": 4,
+    "init_step": 5,
+    "lr": 0.001,
+    "epochs": 500,
+    "batch_size": 8,
+    "noise_std": 0.005,
+    "loss": "normalized_mse",
+    "log_channels": "density(ch0), pressure(ch3)"
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.01837406995368259,
+    "ci_lower": 0.017256724106756285,
+    "ci_upper": 0.019603583902658244,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.003976949490606785,
+    "ci_lower": 0.0037960353536647742,
+    "ci_upper": 0.004166149103050703,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

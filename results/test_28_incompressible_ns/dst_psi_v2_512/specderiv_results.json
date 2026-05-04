@@ -1,0 +1,11 @@
+{
+  "test_id": "28_dst_512_specderiv",
+  "nrmse_fd_before": 0.34190043807029724,
+  "nrmse_spectral_before": 0.3518669605255127,
+  "nrmse_spectral_after": 0.31777310371398926,
+  "nrmse_test": 0.3191350996494293,
+  "published": 0.15,
+  "beat": false,
+  "fix": "Spectral derivative replaces finite-diff \u03c8\u2192v",
+  "resumed_from": "epoch best, val=3.4200e-01"
+}

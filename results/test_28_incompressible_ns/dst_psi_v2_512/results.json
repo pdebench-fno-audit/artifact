@@ -1,0 +1,123 @@
+{
+  "test_id": "28_dst_v2",
+  "nrmse_test": 0.3564596176147461,
+  "nrmse_best_val": 0.35620594024658203,
+  "published": 0.15,
+  "beat": false,
+  "n_params": 235077,
+  "training_time_s": 39962.37680220604,
+  "improvements": [
+    "2D DST spectral conv (full kx-ky coupling)",
+    "Forcing f(x,y) as input",
+    "Full rollout from epoch 1 (no curriculum)",
+    "Filtered spectral derivative (K_CUT=32)"
+  ],
+  "rollout": "full 19 steps from epoch 1",
+  "val_log": [
+    {
+      "epoch": 25,
+      "val_nrmse": 0.5501562356948853,
+      "unroll": 19
+    },
+    {
+      "epoch": 50,
+      "val_nrmse": 0.47947585582733154,
+      "unroll": 19
+    },
+    {
+      "epoch": 75,
+      "val_nrmse": 0.44542554020881653,
+      "unroll": 19
+    },
+    {
+      "epoch": 100,
+      "val_nrmse": 0.4197613596916199,
+      "unroll": 19
+    },
+    {
+      "epoch": 125,
+      "val_nrmse": 0.41920387744903564,
+      "unroll": 19
+    },
+    {
+      "epoch": 150,
+      "val_nrmse": 0.4106338918209076,
+      "unroll": 19
+    },
+    {
+      "epoch": 175,
+      "val_nrmse": 0.38170138001441956,
+      "unroll": 19
+    },
+    {
+      "epoch": 200,
+      "val_nrmse": 0.38589462637901306,
+      "unroll": 19
+    },
+    {
+      "epoch": 225,
+      "val_nrmse": 0.3603610098361969,
+      "unroll": 19
+    },
+    {
+      "epoch": 250,
+      "val_nrmse": 0.36293888092041016,
+      "unroll": 19
+    },
+    {
+      "epoch": 275,
+      "val_nrmse": 0.35620594024658203,
+      "unroll": 19
+    },
+    {
+      "epoch": 300,
+      "val_nrmse": 0.3580338656902313,
+      "unroll": 19
+    },
+    {
+      "epoch": 325,
+      "val_nrmse": 0.3664177358150482,
+      "unroll": 19
+    },
+    {
+      "epoch": 350,
+      "val_nrmse": 0.36779993772506714,
+      "unroll": 19
+    },
+    {
+      "epoch": 375,
+      "val_nrmse": 0.35834062099456787,
+      "unroll": 19
+    },
+    {
+      "epoch": 400,
+      "val_nrmse": 0.3618895709514618,
+      "unroll": 19
+    },
+    {
+      "epoch": 425,
+      "val_nrmse": 0.3692144751548767,
+      "unroll": 19
+    },
+    {
+      "epoch": 450,
+      "val_nrmse": 0.36193931102752686,
+      "unroll": 19
+    },
+    {
+      "epoch": 475,
+      "val_nrmse": 0.362732470035553,
+      "unroll": 19
+    },
+    {
+      "epoch": 500,
+      "val_nrmse": 0.36347702145576477,
+      "unroll": 19
+    }
+  ],
+  "per_sample_stats": {
+    "best": 0.21643635630607605,
+    "median": 0.35364627838134766,
+    "worst": 0.6118739247322083
+  }
+}

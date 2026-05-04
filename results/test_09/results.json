@@ -1,0 +1,38 @@
+{
+  "final_nrmse": 0.00465168384835124,
+  "published_fno": 0.0067,
+  "beta": 4.0,
+  "published_source": "PDEBench Table 6, FNO, Advection beta=4.0",
+  "beat": true,
+  "n_params": 288001,
+  "training_time_s": 16894.354437589645,
+  "best_idx": 467,
+  "median_idx": 134,
+  "worst_idx": 560,
+  "best_err": 0.0005092892679385841,
+  "median_err": 0.0034053015988320112,
+  "worst_err": 0.044156886637210846,
+  "nrmse_pertimestep": 0.004651684231395202,
+  "nrmse_frobenius": 0.004911409690976143,
+  "architecture": {
+    "init_step": 10
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.004651684192795074,
+    "ci_lower": 0.0043760978373294955,
+    "ci_upper": 0.00493843284449898,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.004911409690976143,
+    "ci_lower": 0.004622153355040064,
+    "ci_upper": 0.0052121668725681955,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

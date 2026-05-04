@@ -1,0 +1,75 @@
+{
+  "test_id": 20,
+  "pde": "1D Comp NS",
+  "parameter": "inviscid, Rand, outgoing",
+  "nrmse_pertimestep": 0.23556509265450365,
+  "nrmse_frobenius": 0.005364956799894571,
+  "published_fno": 6.7,
+  "published_source": "PDEBench Table 10, inviscid Rand Outgoing, nRMSE, FNO",
+  "beat_pertimestep": true,
+  "beat_frobenius": true,
+  "best_val_nrmse": 0.27152466773986816,
+  "n_params": 666631,
+  "training_time_s": 15575.375617980957,
+  "split": {
+    "train": 8000,
+    "val": 1000,
+    "test": 1000
+  },
+  "data_leak_checks": {
+    "no_nan_inf": true
+  },
+  "physical_bounds": {
+    "neg_density_count": 0,
+    "neg_pressure_count": 0,
+    "min_density": 0.4735123813152313,
+    "min_pressure": 2.7416977882385254,
+    "positivity_guaranteed": true,
+    "method": "log-space prediction with exp() output"
+  },
+  "per_sample_stats": {
+    "best_idx": 356,
+    "best_err": 0.00025158911012113094,
+    "median_idx": 656,
+    "median_err": 0.0030096580740064383,
+    "worst_idx": 126,
+    "worst_err": 0.05121508985757828
+  },
+  "architecture": {
+    "type": "shock_tube",
+    "modes": 32,
+    "width": 64,
+    "n_layers": 4,
+    "pad_size": 32,
+    "h1_weight": 0.05,
+    "noise_std": 0.005,
+    "lr": 0.001,
+    "epochs": 500,
+    "batch_size": 16,
+    "res_x": 4,
+    "res_t": 5,
+    "init_step": 10,
+    "loss": "normalized_mse",
+    "log_space": true,
+    "log_channels": "density (ch0), pressure (ch2)",
+    "note": "v2: log-space prediction — density and pressure predicted as log(x), then exp() guarantees positivity"
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.23556509323426297,
+    "ci_lower": 0.194095904437271,
+    "ci_upper": 0.27997128984499153,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.005364956799894571,
+    "ci_lower": 0.004981232673198974,
+    "ci_upper": 0.005780122228444088,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

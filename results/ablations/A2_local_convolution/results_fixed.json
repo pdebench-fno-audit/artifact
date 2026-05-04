@@ -1,0 +1,93 @@
+{
+  "ablation_id": "A2_fixed",
+  "ablation_name": "No Local Convolution Branch (matched Test 4 config)",
+  "ablation_removes": "local_conv",
+  "original_test_id": 4,
+  "original_nrmse": 0.0108,
+  "ablation_nrmse_pertimestep": 0.022799,
+  "published_fno": 0.029,
+  "degradation_factor": 2.11,
+  "still_beats_published": true,
+  "n_params": 1074433,
+  "n_params_full_model": 1189381,
+  "param_reduction": 114948,
+  "epochs_completed": 350,
+  "epochs_target": 500,
+  "training_time_s": 52062,
+  "avg_epoch_time_s": 148.7,
+  "gpu": "A10G",
+  "status": "stopped_early",
+  "note": "Stopped at epoch 350/500 by user. Model still improving (loss dropped 35% in last 100 epochs). Best val nRMSE at final epoch.",
+  "config_matched": {
+    "modes": 64,
+    "width": 64,
+    "res_x": 1,
+    "res_t": 5,
+    "batch": 16,
+    "epochs": 500,
+    "lr": 0.001,
+    "loss": "MSE + H1(0.05) + freq(0.1)",
+    "noise_std": 0.005,
+    "darus_id": "268190",
+    "n_train": 9000,
+    "n_test": 1000,
+    "spatial_resolution": 1024,
+    "note": "EXACT Test 4 config with ONLY local_conv removed. No confounders."
+  },
+  "val_trajectory": [
+    {
+      "epoch": 50,
+      "nrmse": 0.089975
+    },
+    {
+      "epoch": 100,
+      "nrmse": 0.053666
+    },
+    {
+      "epoch": 150,
+      "nrmse": 0.073004
+    },
+    {
+      "epoch": 200,
+      "nrmse": 0.039662
+    },
+    {
+      "epoch": 250,
+      "nrmse": 0.033973
+    },
+    {
+      "epoch": 300,
+      "nrmse": 0.035255
+    },
+    {
+      "epoch": 350,
+      "nrmse": 0.022799
+    }
+  ],
+  "train_trajectory_summary": {
+    "initial_loss": 7.2027,
+    "final_loss": 1.0303,
+    "loss_reduction": 7.0
+  },
+  "data_info": {
+    "dataset": "1D_Burgers_Sols_Nu0.001.hdf5",
+    "file_size_gb": 8.23,
+    "N": 10000,
+    "T_raw": 201,
+    "X_raw": 1024,
+    "X_ds": 1024,
+    "T_ds": 41,
+    "data_shape": [
+      10000,
+      1024,
+      41,
+      1
+    ]
+  },
+  "critique_caveats": {
+    "unconverged": true,
+    "note": "Degradation factor (2.11\u00d7) is an UPPER BOUND \u2014 model was still actively improving at epoch 350 (33% val nRMSE improvement in last 100 epochs, train loss not plateaued). True converged degradation likely 1.4-2.1\u00d7. Qualitative conclusion (local conv helps on shocks) is robust.",
+    "degradation_range": "1.4\u00d7 to 2.1\u00d7 (unconverged)",
+    "recommended_label": "~2\u00d7 degradation (upper bound, model unconverged)"
+  }
+}

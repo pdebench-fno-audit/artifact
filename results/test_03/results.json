@@ -1,0 +1,53 @@
+{
+  "ensemble_nrmse": 0.001234738272614777,
+  "n_models": 1,
+  "published_pdebench_table9": 0.0014,
+  "published_source": "PDEBench arXiv:2210.07182 Table 9, FNO, ReacDiff nu=0.5 rho=1.0, nRMSE",
+  "beat": true,
+  "individual": {
+    "42": 0.001234738272614777
+  },
+  "n_params": 1230593,
+  "conservation_drift": 0.0010559754446148872,
+  "total_time_s": 8048.880733013153,
+  "best_idx": 632,
+  "median_idx": 119,
+  "worst_idx": 156,
+  "best_err": 0.00021941959857940674,
+  "median_err": 0.0005236276192590594,
+  "worst_err": 0.048763055354356766,
+  "architecture": {
+    "modes": 32,
+    "width": 96,
+    "n_layers": 4,
+    "h1_weight": 0.1,
+    "noise_std": 0.001,
+    "init_step": 10
+  },
+  "literature_innovations": [
+    "Increased Fourier modes 16->32 (LOGLO-FNO, arXiv:2504.04260)",
+    "Sobolev/H1 loss for spatial gradient penalty",
+    "Noise injection during AR training (Markov NO, arXiv:2106.06898)",
+    "CosineAnnealing LR (CAPE, arXiv:2304.14118)"
+  ],
+  "nrmse_pertimestep": 0.0012347383572804656,
+  "nrmse_frobenius": 0.0013800805900245905,
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.001234738325729929,
+    "ci_lower": 0.0009987104207942552,
+    "ci_upper": 0.001508155494089475,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.0013800805900245905,
+    "ci_lower": 0.0011323528933724447,
+    "ci_upper": 0.0016645527963366476,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

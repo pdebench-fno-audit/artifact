@@ -1,0 +1,44 @@
+{
+  "config": "M01_Eta01",
+  "pde": "2D Compressible CFD",
+  "parameter": "M=0.1, η=ζ=0.01 (turbulent)",
+  "nrmse_test": 0.004764946643263102,
+  "nrmse_frobenius": 0.004764946643263102,
+  "published": 0.36,
+  "published_source": "arXiv:2210.07182v7, Table 11",
+  "factor": 6.7838,
+  "beat": true,
+  "architecture": {
+    "type": "FNO2d_AR",
+    "modes": 12,
+    "width": 32,
+    "n_layers": 4,
+    "nc": 4,
+    "init_step": 5,
+    "note": "Same architecture as Test 29, different data config"
+  },
+  "per_sample_stats": {
+    "best": 0.005590573884546757,
+    "median": 0.034014128148555756,
+    "worst": 0.6290383338928223
+  },
+  "nrmse_pertimestep": 0.053067728877067566,
+  "bootstrap_ci_frobenius": {
+    "mean": 0.004764946643263102,
+    "ci_lower": 0.004574190879875096,
+    "ci_upper": 0.004958468347715098,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.053067728877067566,
+    "ci_lower": 0.04964707628892502,
+    "ci_upper": 0.05673710471770028,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

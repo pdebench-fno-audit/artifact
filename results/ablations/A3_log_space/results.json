@@ -1,0 +1,14 @@
+{
+  "ablation_id": "A3",
+  "ablation_name": "No Noise Injection",
+  "ablation_removes": "noise_injection",
+  "original_test_id": 19,
+  "original_nrmse": 0.029982,
+  "ablation_nrmse_pertimestep": 0.03005954809486866,
+  "ablation_nrmse_frobenius": 0.010154846124351025,
+  "published_fno": 0.12,
+  "degradation_factor": 1.0,
+  "still_beats_published": true,
+  "n_params": 666631,
+  "training_time_s": 20111.70294904709
+}

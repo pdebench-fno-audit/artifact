@@ -1,0 +1,7 @@
+{
+  "test": "W3_advection_proper_validation",
+  "description": "Advection beta=1.0 with proper 8000/1000/1000 train/val/test split",
+  "seed_42": {"nrmse": 0.00475, "published": 0.0097, "improvement": "2.04x"},
+  "seed_123": {"nrmse": 0.00470, "published": 0.0097, "improvement": "2.06x"},
+  "conclusion": "Protocol change (test-set to validation-based selection) degrades result by <2%. Improvement holds."
+}

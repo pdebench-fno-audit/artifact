@@ -1,0 +1,61 @@
+{
+  "final_nrmse": 0.015622839331626892,
+  "published_fno": 0.095,
+  "published_source": "PDEBench arXiv:2210.07182 Table, FNO, 1D CFD eta=zeta=0.01 periodic rand",
+  "beat": true,
+  "per_channel_nrmse": {
+    "rho": 0.01336089987307787,
+    "v": 0.028902117162942886,
+    "p": 0.00460550282150507
+  },
+  "n_params": 666631,
+  "training_time_s": 17543.448986291885,
+  "best_idx": 997,
+  "median_idx": 144,
+  "worst_idx": 638,
+  "best_err": 0.0004869232652708888,
+  "median_err": 0.00380334141664207,
+  "worst_err": 0.04882436618208885,
+  "architecture": {
+    "modes": 32,
+    "width": 64,
+    "n_layers": 4,
+    "nc": 3,
+    "spatial_res": 256,
+    "h1_weight": 0.05,
+    "noise_std": 0.001,
+    "init_step": 10
+  },
+  "channel_normalization": {
+    "means": [
+      5.875003337860107,
+      -0.0014106929302215576,
+      59.05671310424805
+    ],
+    "stds": [
+      3.46502685546875,
+      0.5038082599639893,
+      30.766197204589844
+    ]
+  },
+  "nrmse_pertimestep": 0.01562283852730285,
+  "nrmse_frobenius": 0.004971031099557877,
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.015622838434285245,
+    "ci_lower": 0.01484289096508404,
+    "ci_upper": 0.016442690219432683,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.004971031099557877,
+    "ci_lower": 0.004709641810394532,
+    "ci_upper": 0.0052430542575690195,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

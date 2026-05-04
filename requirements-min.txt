@@ -1,0 +1,4 @@
+# Minimum requirements for prediction-based verification (CPU only, no GPU needed)
+# Usage: pip install -r requirements-min.txt
+numpy>=1.24.0
+huggingface_hub>=0.20.0

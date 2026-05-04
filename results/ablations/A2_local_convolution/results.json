@@ -1,0 +1,14 @@
+{
+  "ablation_id": "A2",
+  "ablation_name": "No Local Convolution Branch",
+  "ablation_removes": "local_conv",
+  "original_test_id": 4,
+  "original_nrmse": 0.0108,
+  "ablation_nrmse_pertimestep": 0.0011868344154208899,
+  "ablation_nrmse_frobenius": 0.0014544370351359248,
+  "published_fno": 0.029,
+  "degradation_factor": 0.11,
+  "still_beats_published": true,
+  "n_params": 1230593,
+  "training_time_s": 32906.197702884674
+}

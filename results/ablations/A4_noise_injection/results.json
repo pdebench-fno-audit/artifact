@@ -1,0 +1,14 @@
+{
+  "ablation_id": "A4",
+  "ablation_name": "No Log-Space Prediction",
+  "ablation_removes": "log_space_prediction",
+  "original_test_id": 19,
+  "original_nrmse": 0.029982,
+  "original_note": "Test 19 v2 (log-space): 2.998e-2",
+  "ablation_nrmse_pertimestep": 0.036445,
+  "ablation_note": "Test 19 v1 (linear-space): 3.645e-2",
+  "published_fno": 0.12,
+  "degradation_factor": 1.22,
+  "still_beats_published": true,
+  "source": "Comparison of Test 19 v1 (linear) vs v2 (log-space). No additional run needed \u2014 both versions already completed."
+}

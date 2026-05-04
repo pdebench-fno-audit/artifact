@@ -1,0 +1,14 @@
+{
+  "ablation_id": "A1",
+  "ablation_name": "No Normalized MSE Loss",
+  "ablation_removes": "normalized_mse",
+  "original_test_id": 13,
+  "original_nrmse": 0.00034499,
+  "ablation_nrmse_pertimestep": 0.00070779217639938,
+  "ablation_nrmse_frobenius": 0.000742306758183986,
+  "published_fno": 0.0007,
+  "degradation_factor": 2.05,
+  "still_beats_published": false,
+  "n_params": 1489029,
+  "training_time_s": 12768.861585378647
+}

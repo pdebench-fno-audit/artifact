@@ -1,0 +1,69 @@
+{
+  "final_nrmse": 0.010799826122820377,
+  "published_fno": 0.029,
+  "task_target": 0.042,
+  "published_source": "PDEBench arXiv:2210.07182 Table 7, FNO, Burgers nu=0.001, nRMSE",
+  "beat_task": true,
+  "beat_published": true,
+  "n_params": 1189381,
+  "training_time_s": 53106.14050722122,
+  "best_idx": 383,
+  "median_idx": 207,
+  "worst_idx": 316,
+  "best_err": 0.0021378877572715282,
+  "median_err": 0.010342317633330822,
+  "worst_err": 0.08554142713546753,
+  "frequency_band_errors": {
+    "low (k=0-4)": {
+      "abs_error": 0.17209529876708984,
+      "rel_error": 0.0015287435125294702
+    },
+    "mid (k=5-12)": {
+      "abs_error": 0.08760599792003632,
+      "rel_error": 0.0656338970398975
+    },
+    "high (k>=13)": {
+      "abs_error": 0.010546166449785233,
+      "rel_error": 0.30259454245664485
+    }
+  },
+  "architecture": {
+    "modes": 64,
+    "width": 64,
+    "n_layers": 4,
+    "local_conv_kernel": 7,
+    "spatial_res": 1024,
+    "h1_weight": 0.05,
+    "noise_std": 0.005,
+    "freq_loss_weight": 0.1,
+    "init_step": 10
+  },
+  "literature_innovations": [
+    "NO downsampling — kept full 1024 native resolution for shock capture (PDEBench downsamples to 256)",
+    "64 Fourier modes (vs 16 baseline) for finer shock features",
+    "Parallel local convolution branch (LOGLO-FNO, arXiv:2504.04260)",
+    "Frequency-sensitive loss with 3 bins (arXiv:2504.04260)",
+    "Sobolev/H1 loss component for gradient penalty",
+    "Noise injection sigma=5e-3 for AR rollout stability (F-FNO, arXiv:2111.13802)"
+  ],
+  "nrmse_pertimestep": 0.010799825972607058,
+  "nrmse_frobenius": 0.013196527026593685,
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.01079982596003045,
+    "ci_lower": 0.010308789419954606,
+    "ci_upper": 0.011333112920250278,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.013196527026593685,
+    "ci_lower": 0.01255866611088277,
+    "ci_upper": 0.013857426034862874,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

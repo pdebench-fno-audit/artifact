@@ -1,0 +1,67 @@
+{
+  "test_id": 17,
+  "pde": "1D Comp NS",
+  "parameter": "η=ζ=0.1, Rand, periodic",
+  "nrmse_pertimestep": 0.006763996270654554,
+  "nrmse_frobenius": 0.00196439609862864,
+  "published_fno": 0.068,
+  "published_source": "PDEBench arXiv:2210.07182 Table 10, η=ζ=0.1 Rand periodic, nRMSE, FNO",
+  "beat_pertimestep": true,
+  "beat_frobenius": true,
+  "best_val_nrmse": 0.006691435817629099,
+  "n_params": 666631,
+  "training_time_s": 18782.039313316345,
+  "split": {
+    "train": 8000,
+    "val": 1000,
+    "test": 1000
+  },
+  "data_leak_checks": {
+    "ic_preserved": true,
+    "predictions_differ": true,
+    "no_nan_inf": true,
+    "near_perfect_fraction": 0.0
+  },
+  "per_sample_stats": {
+    "best_idx": 912,
+    "best_err": 0.00016962230438366532,
+    "median_idx": 677,
+    "median_err": 0.0013138457434251904,
+    "worst_idx": 638,
+    "worst_err": 0.025206753984093666
+  },
+  "architecture": {
+    "type": "multi",
+    "modes": 32,
+    "width": 64,
+    "n_layers": 4,
+    "pad_size": 0,
+    "h1_weight": 0.05,
+    "noise_std": 0.001,
+    "lr": 0.001,
+    "epochs": 500,
+    "batch_size": 16,
+    "res_x": 4,
+    "res_t": 5,
+    "init_step": 10,
+    "loss": "normalized_mse"
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.0067639962691266025,
+    "ci_lower": 0.006354665105076834,
+    "ci_upper": 0.0072003170547095185,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.00196439609862864,
+    "ci_lower": 0.0018320784648425616,
+    "ci_upper": 0.0021022194969347765,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

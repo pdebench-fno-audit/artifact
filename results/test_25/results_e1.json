@@ -1,0 +1,19 @@
+{
+  "experiment": "E1",
+  "test_id": 25,
+  "pde": "2D Darcy Flow",
+  "parameter": "\u03b2=100.0",
+  "fix": "Target normalization + family config (width=32, batch=16, no local conv)",
+  "physicist_prediction": "4e-3 to 8e-3",
+  "nrmse": 0.009499595500528812,
+  "published_fno": 0.0064,
+  "beat": false,
+  "previous_nrmse": 0.0118,
+  "target_normalization": {
+    "mean": 15.225398063659668,
+    "std": 11.840862274169922
+  },
+  "n_params": 1188353,
+  "training_time_s": 8836.57670879364,
+  "architecture": "FNO2d pure spectral (NO local conv), width=32, modes=12, 4 layers"
+}

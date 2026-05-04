@@ -1,0 +1,66 @@
+{
+  "test_id": 13,
+  "pde": "1D Diff-React",
+  "parameter": "ν=2.0, ρ=1.0",
+  "nrmse_pertimestep": 0.000344994372095574,
+  "nrmse_frobenius": 0.000381080259103328,
+  "metric_note": "Both metrics computed; per-timestep is primary for PDEBench comparison",
+  "published_fno": 0.0007,
+  "published_source": "PDEBench arXiv:2210.07182 Table 9, FNO, ReacDiff nu=2.0 rho=1.0",
+  "beat_pertimestep": true,
+  "beat_frobenius": true,
+  "best_val_nrmse": 0.00034705770667642355,
+  "n_params": 1489029,
+  "training_time_s": 9680.08303141594,
+  "split": {
+    "train": 8000,
+    "val": 1000,
+    "test": 1000
+  },
+  "data_leak_checks": {
+    "ic_preserved": true,
+    "predictions_differ": true,
+    "no_nan_inf": true,
+    "near_perfect_fraction": 0.0
+  },
+  "per_sample_stats": {
+    "best_idx": 979,
+    "best_err": 0.00012264418182894588,
+    "median_idx": 625,
+    "median_err": 0.0001627582823857665,
+    "worst_idx": 156,
+    "worst_err": 0.009855932556092739
+  },
+  "architecture": {
+    "type": "enhanced",
+    "modes": 32,
+    "width": 96,
+    "n_layers": 4,
+    "h1_weight": 0.0,
+    "noise_std": 0.0,
+    "lr": 0.0005,
+    "epochs": 500,
+    "batch_size": 32,
+    "res_x": 4,
+    "res_t": 5,
+    "init_step": 10
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.00034499436919974293,
+    "ci_lower": 0.00030536441311743894,
+    "ci_upper": 0.00038933741680349066,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.000381080259103328,
+    "ci_lower": 0.0003376588199829712,
+    "ci_upper": 0.0004294380670522514,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "test_id": 11,
+  "pde": "1D Burgers",
+  "parameter": "ν=1.0",
+  "nrmse_pertimestep": 0.0043223032487496255,
+  "nrmse_frobenius": 0.004293999634683132,
+  "metric_note": "v4: res_x=2 (512 pts) + curriculum (MSE 250ep -> nMSE 250ep)",
+  "published_fno": 0.004,
+  "published_source": "PDEBench arXiv:2210.07182 Table 7, FNO, Burgers nu=1.0",
+  "beat_pertimestep": false,
+  "beat_frobenius": false,
+  "best_val_nrmse": 0.004132312256842852,
+  "n_params": 1489029,
+  "training_time_s": 47062.924194574356,
+  "split": {
+    "train": 8000,
+    "val": 1000,
+    "test": 1000
+  },
+  "data_leak_checks": {
+    "ic_preserved": true,
+    "predictions_differ": true,
+    "no_nan_inf": true,
+    "near_perfect_fraction": 0.0
+  },
+  "per_sample_stats": {
+    "best_idx": 105,
+    "best_err": 0.0002962358994409442,
+    "median_idx": 401,
+    "median_err": 0.004196879919618368,
+    "worst_idx": 497,
+    "worst_err": 0.13486997783184052
+  },
+  "architecture": {
+    "type": "enhanced",
+    "modes": 32,
+    "width": 96,
+    "n_layers": 4,
+    "h1_weight": 0.0,
+    "noise_std": 0.001,
+    "lr": 0.0005,
+    "epochs": 500,
+    "batch_size": 20,
+    "res_x": 2,
+    "res_t": 5,
+    "init_step": 10,
+    "curriculum_switch": 250,
+    "loss_phase1": "MSE (epochs 1-250)",
+    "loss_phase2": "normalized MSE (epochs 251-500)"
+  },
+  "note": "Corrected to v3 result (normalized MSE + stratified val). v4 (curriculum) was worse.",
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.0043223032856936515,
+    "ci_lower": 0.003995809037519587,
+    "ci_upper": 0.00483626307058925,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.004293999634683132,
+    "ci_lower": 0.004037110836308421,
+    "ci_upper": 0.004649961004689248,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

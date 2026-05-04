@@ -1,0 +1,38 @@
+{
+  "final_nrmse": 0.0014132054056972265,
+  "published": 0.0029,
+  "beat": true,
+  "n_params": 288001,
+  "conservation_drift": 0.0010506737744435668,
+  "seed": 42,
+  "model": "FNO1d-4L-16M-64W",
+  "best_idx": 57,
+  "median_idx": 390,
+  "worst_idx": 167,
+  "best_err": 9.072782268049195e-05,
+  "median_err": 0.0012798365205526352,
+  "worst_err": 0.01481416542083025,
+  "nrmse_pertimestep": 0.0014132054770485528,
+  "nrmse_frobenius": 0.0016522177029401064,
+  "architecture": {
+    "init_step": 10
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.0014132054762946698,
+    "ci_lower": 0.0013512857074660133,
+    "ci_upper": 0.0014763525159739606,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.0016522177029401064,
+    "ci_lower": 0.0015671509060592142,
+    "ci_upper": 0.0017389627289316194,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

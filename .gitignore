@@ -1,0 +1,49 @@
+# Model checkpoints (too large for GitHub — available upon request)
+*.pt
+*.pth
+*.ckpt
+
+# Data files
+*.h5
+*.hdf5
+*.npz
+*.npy
+
+# Locally generated diagnostic plots inside the per-test results dirs
+# (qualitative; canonical numbers are in results.json). Figures committed
+# under assets/ for the README are explicitly allowed.
+results/**/*.png
+results/**/*.jpg
+results/**/*.jpeg
+results/**/*.pdf
+analysis/**/*.png
+analysis/**/*.jpg
+analysis/**/*.jpeg
+analysis/**/*.pdf
+
+# Cache
+.cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls

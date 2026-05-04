@@ -1,0 +1,25 @@
+{
+  "test_id": "28_vort_poisson",
+  "description": "Vorticity-Poisson FNO with DST Poisson solve, Thom BC, cell-centered grid",
+  "resolution": "512x512",
+  "temporal": "RES_T=1, 101 native timesteps, 91 AR steps",
+  "val_nrmse": 0.2867,
+  "val_epoch": 25,
+  "training_status": "nMSE fine-tuning from epoch 25 MSE checkpoint, loss still decreasing",
+  "comparator": {
+    "standard_fno_256": 0.28,
+    "omniarch_fno_repro": 0.2574
+  },
+  "architecture": {
+    "spectral_conv": "matmul DST (12 modes)",
+    "poisson_solve": "FFT DST (full modes)",
+    "thom_bc": true,
+    "cell_centered_grid": true,
+    "instance_norm": true,
+    "width": 20,
+    "modes": 12,
+    "layers": 4,
+    "params": 233789
+  },
+  "note": "Fine-tuned with nMSE loss (LR=5e-4, T_max=250) from MSE-trained model (val 0.299)"
+}

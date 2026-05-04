@@ -1,0 +1,62 @@
+{
+  "test_id": 26,
+  "pde": "2D Diff-React",
+  "parameter": "default",
+  "nrmse_pertimestep": 0.002900749926120625,
+  "nrmse_frobenius": 0.002656375989317894,
+  "published_fno": 0.12,
+  "published_source": "PDEBench Table 5, 2D diffusion-reaction, nRMSE, FNO",
+  "beat_pertimestep": true,
+  "beat_frobenius": true,
+  "best_val_nrmse": 0.0026199105195701122,
+  "n_params": 1291302,
+  "training_time_s": 21666.72893667221,
+  "split": {
+    "train": 800,
+    "val": 100,
+    "test": 100
+  },
+  "data_leak_checks": {
+    "no_nan_inf": true
+  },
+  "per_sample_stats": {
+    "best_idx": 9,
+    "best_err": 0.0019474081927910447,
+    "median_idx": 77,
+    "median_err": 0.0025271831545978785,
+    "worst_idx": 87,
+    "worst_err": 0.004576290026307106
+  },
+  "architecture": {
+    "type": "fno2d_ar",
+    "modes": 12,
+    "width": 32,
+    "n_layers": 4,
+    "init_step": 5,
+    "lr": 0.001,
+    "epochs": 500,
+    "batch_size": 8,
+    "loss": "normalized_mse",
+    "noise_std": 0.001,
+    "res_t": 5,
+    "prediction_type": "autoregressive"
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.002900749926120625,
+    "ci_lower": 0.002829950077963986,
+    "ci_upper": 0.0029788457519780423,
+    "n_samples": 100,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.002656375989317894,
+    "ci_lower": 0.002567787336476613,
+    "ci_upper": 0.0027544788472005166,
+    "n_samples": 100,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}

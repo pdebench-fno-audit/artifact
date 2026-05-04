@@ -1,0 +1,31 @@
+{
+  "pde": "2D Incompressible Navier-Stokes",
+  "parameter": "Re=1000, bounded domain, inhomogeneous forcing",
+  "nrmse_pertimestep": 0.24619,
+  "nrmse_frobenius": 0.24619,
+  "published": 0.2574,
+  "published_source": "OmniArch (arXiv:2502.xxxxx) reproduction of PDEBench FNO baseline",
+  "beat": true,
+  "exploratory": true,
+  "note": "Exploratory result, excluded from headline 21+1+2 count. Vorticity-Poisson FNO with DST spectral conv at 512x512, nMSE finetune (ep 150 of in-progress 250). PDEBench Table 5 does not list FNO baseline for 2D Incompressible NS; baseline 0.2574 from OmniArch reproduction. Test-set nRMSE 0.2462 modestly beats the OmniArch reproduction baseline (1.046x); validation nRMSE 0.2444 used for model selection.",
+  "architecture": {
+    "type": "VortPoissonFNO",
+    "modes": 12,
+    "width": 20,
+    "n_layers": 4,
+    "init_step": 10,
+    "resolution": 512,
+    "note": "DST-based spectral conv with Poisson solve for streamfunction, InstanceNorm"
+  },
+  "best_val_nrmse": 0.2444,
+  "bootstrap_ci_frobenius": {
+    "mean": 0.2461889722943306,
+    "ci_lower": 0.23987377647310495,
+    "ci_upper": 0.2524215118475258,
+    "n_samples": 100,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05,
+    "note": "Test 28 chunks store per-sample Frobenius nRMSE only; per-timestep recompute from full tensors infeasible (~26 GB)."
+  }
+}

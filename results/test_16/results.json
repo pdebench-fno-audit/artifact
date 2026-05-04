@@ -1,0 +1,67 @@
+{
+  "test_id": 16,
+  "pde": "1D Diff-Sorp",
+  "parameter": "default",
+  "nrmse_pertimestep": 0.0009954838420857084,
+  "nrmse_frobenius": 0.0010819227900356054,
+  "published_fno": 0.0017,
+  "published_source": "PDEBench arXiv:2210.07182 Table 5, Diffusion-sorption, nRMSE, FNO",
+  "beat_pertimestep": true,
+  "beat_frobenius": true,
+  "best_val_nrmse": 0.0009866071632131934,
+  "n_params": 1489029,
+  "training_time_s": 11304.073093414307,
+  "split": {
+    "train": 8000,
+    "val": 1000,
+    "test": 1000
+  },
+  "data_leak_checks": {
+    "ic_preserved": true,
+    "predictions_differ": true,
+    "no_nan_inf": true,
+    "near_perfect_fraction": 0.0
+  },
+  "per_sample_stats": {
+    "best_idx": 35,
+    "best_err": 0.0005637097638100386,
+    "median_idx": 39,
+    "median_err": 0.0010668530594557524,
+    "worst_idx": 255,
+    "worst_err": 0.0019967176485806704
+  },
+  "architecture": {
+    "type": "enhanced_padded",
+    "modes": 32,
+    "width": 96,
+    "n_layers": 4,
+    "pad_size": 32,
+    "h1_weight": 0.0,
+    "noise_std": 0.001,
+    "lr": 0.0005,
+    "epochs": 500,
+    "batch_size": 32,
+    "res_x": 4,
+    "res_t": 5,
+    "init_step": 10,
+    "loss": "normalized_mse"
+  },
+  "bootstrap_ci_pertimestep": {
+    "mean": 0.0009954838379066628,
+    "ci_lower": 0.0009833663661832609,
+    "ci_upper": 0.0010077809797447118,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  },
+  "bootstrap_ci_frobenius": {
+    "mean": 0.0010819227900356054,
+    "ci_lower": 0.00106960062875296,
+    "ci_upper": 0.001094433378733811,
+    "n_samples": 1000,
+    "n_bootstrap": 10000,
+    "method": "percentile",
+    "alpha": 0.05
+  }
+}
